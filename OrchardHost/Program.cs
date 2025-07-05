@@ -2,14 +2,13 @@ using Projects;
 
 var builder = DistributedApplication.CreateBuilder(args);
 
-var adminPassword = builder.AddParameter("admin-password");
-
-
+// the MySQL database
 var mysql = builder.AddMySql("mysql", port: 3306)
     .WithLifetime(ContainerLifetime.Persistent);
 
 var mysqldb = mysql.AddDatabase("ContentDb");
 
+// the Azure Storage emulator
 var storage = builder.AddAzureStorage("storage").RunAsEmulator(azurite =>
 {
     azurite.WithLifetime(ContainerLifetime.Persistent);
@@ -21,9 +20,10 @@ var storage = builder.AddAzureStorage("storage").RunAsEmulator(azurite =>
 var blobs = storage.AddBlobs("blobs");
 var container = blobs.AddBlobContainer("shells");
 
-var app = builder.AddProject<OrchardApp>("App")
-    .WithReference(blobs)
-    .WithReference(mysqldb, "ContentDb")
+// the admin password
+var adminPassword = builder.AddParameter("admin-password", secret: true);
+
+builder.AddProject<OrchardApp>("App")
     .WithEnvironment("OrchardCore__OrchardCore_DataProtection_Azure__ConnectionString", blobs)
     .WithEnvironment("OrchardCore__OrchardCore_Shells_Azure__ConnectionString", blobs)
     .WithEnvironment("OrchardCore__OrchardCore_AutoSetup__Tenants__0__DatabaseConnectionString", mysqldb)
