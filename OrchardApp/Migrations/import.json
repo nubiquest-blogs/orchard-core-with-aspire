@@ -1,0 +1,111 @@
+{
+  "name": "",
+  "displayName": "",
+  "description": "",
+  "author": "",
+  "website": "",
+  "version": "",
+  "issetuprecipe": false,
+  "categories": [],
+  "tags": [],
+  "steps": [
+    {
+      "name": "ReplaceContentDefinition",
+      "ContentTypes": [
+        {
+          "Name": "HomeData",
+          "DisplayName": "Home Data",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Creatable": true,
+              "Listable": true,
+              "Draftable": true,
+              "Versionable": true,
+              "Securable": true
+            },
+            "FullTextAspectSettings": {
+              "IncludeFullTextTemplate": false,
+              "IncludeBodyAspect": true,
+              "IncludeDisplayText": true
+            },
+            "GraphQLContentTypeSettings": {
+              "Hidden": false
+            }
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "HomeData",
+              "Name": "HomeData",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                }
+              }
+            },
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "ContentParts": [
+        {
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentPartSettings": {
+              "Attachable": true,
+              "Reusable": false,
+              "Description": "Provides a Title for your content item.",
+              "DefaultPosition": "0"
+            }
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "HomeData",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "TextField",
+              "Name": "SubTitle",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Sub Title",
+                  "Position": "0"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "content",
+      "data": [
+        {
+          "ContentItemId": "[js: uuid()]",
+          "ContentType": "HomeData",
+          "DisplayText": "Orchard Demo",
+          "Latest": true,
+          "Published": true,
+          "Owner": "[js: parameters(\u0027AdminUserId\u0027)]",
+          "Author": "[js: parameters(\u0027AdminUsername\u0027)]",
+          "HomeData": {
+            "SubTitle": {
+              "Text": "Look at how we use Orchard with asp.net Aspire"
+            }
+          },
+          "TitlePart": {
+            "Title": "Orchard Demo"
+          }
+        }
+      ]
+    }
+  ]
+}

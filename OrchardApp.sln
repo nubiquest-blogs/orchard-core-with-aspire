@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrchardApp", "OrchardApp\OrchardApp.csproj", "{C3473CC7-F323-4566-A265-05F323DB8196}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrchardHost", "OrchardHost\OrchardHost.csproj", "{1CAAD8DB-02C9-43BF-9373-190BC83F45AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrchardServiceDefaults", "OrchardServiceDefaults\OrchardServiceDefaults.csproj", "{C4B1BAA6-F2DA-4081-9E3A-8686EA78D00E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C3473CC7-F323-4566-A265-05F323DB8196}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3473CC7-F323-4566-A265-05F323DB8196}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3473CC7-F323-4566-A265-05F323DB8196}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3473CC7-F323-4566-A265-05F323DB8196}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CAAD8DB-02C9-43BF-9373-190BC83F45AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CAAD8DB-02C9-43BF-9373-190BC83F45AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CAAD8DB-02C9-43BF-9373-190BC83F45AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CAAD8DB-02C9-43BF-9373-190BC83F45AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4B1BAA6-F2DA-4081-9E3A-8686EA78D00E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4B1BAA6-F2DA-4081-9E3A-8686EA78D00E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4B1BAA6-F2DA-4081-9E3A-8686EA78D00E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4B1BAA6-F2DA-4081-9E3A-8686EA78D00E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
