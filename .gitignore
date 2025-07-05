@@ -368,3 +368,8 @@ FodyWeavers.xsd
 
 # launch settings
 **/*/.idea/*
+
+
+**/*/App_Data/*
+
+**/*/Localization/*
