@@ -3,7 +3,7 @@
 <a href="https://learn.microsoft.com/en-us/dotnet/aspire/get-started/aspire-overview/" target="_blank">ASP.NET Aspire</a> is a real game-changer in the .NET ecosystem. It allows dev-time orchestrations of the components that you need for your application. These components (called resources) can be APIs, front-end applications, databases, containers, redis cache or any cloud component.
 
 This tutorial presents how to use Aspire to dev-orchestrate a web app based on <a href="https://docs.orchardcore.net/en/latest/" target="_blank">Orchard CMS</a>. The orchestration involves:
-- The app itself, which is a Razor Pages application. The CMS is configured using the <a href="https://docs.orchardcore.net/en/main/reference/modules/AutoSetup/" target="_blank">headless</a> AutoSetup feature that will install the default tenant based on the <a href="https://docs.orchardcore.net/en/main/guides/decoupled-cms/" target="_blank">headless</a> recipe of Orchard Core.
+- The app itself, which is a Razor Pages application. The CMS is configured using <a href="https://docs.orchardcore.net/en/main/reference/modules/AutoSetup/" target="_blank">AutoSetup</a>  to install the default tenant that is based on the <a href="https://docs.orchardcore.net/en/main/guides/decoupled-cms/" target="_blank">headless</a> recipe.
 - A MySQL database that will be used as the content database for the Orchard site.
 - An Azure storage container that will be used as storage for Orchard <a href="https://docs.orchardcore.net/en/main/reference/modules/Shells/" target="_blank">shell</a> and data protection data.
 
