@@ -5,11 +5,11 @@
 This tutorial presents how to use Aspire to dev-orchestrate a web app based on <a href="https://docs.orchardcore.net/en/latest/" target="_blank">Orchard CMS</a>. The orchestration involves:
 - The app itself, which is a Razor Pages application. The CMS is configured using <a href="https://docs.orchardcore.net/en/main/reference/modules/AutoSetup/" target="_blank">AutoSetup</a>  to install the default tenant that is based on the <a href="https://docs.orchardcore.net/en/main/guides/decoupled-cms/" target="_blank">headless</a> recipe.
 - A MySQL database that will be used as the content database for the Orchard site.
-- An Azure storage container that will be used as storage for Orchard <a href="https://docs.orchardcore.net/en/main/reference/modules/Shells/" target="_blank">shell</a> and data protection data.
+- An Azure storage container that will be used as storage for Orchard <a href="https://docs.orchardcore.net/en/main/reference/modules/Shells/" target="_blank">shell</a> and data protection.
 
 The result is a decoupled web app that:
 - Shows data that is stored in Orchard.
-- Initial content and content types are created using <a href="https://docs.orchardcore.net/en/main/reference/modules/Shells/" target="_blank">data migrations</a>.
+- Initial content and content types are created using <a href="https://docs.orchardcore.net/en/main/reference/modules/Migrations/" target="_blank">data migrations</a>.
 
 The result should look like the capture below. The text content is coming from Orchard.
 ![](/images/app-capture.png)
