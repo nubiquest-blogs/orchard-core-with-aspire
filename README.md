@@ -20,8 +20,8 @@ Before diving into the implementation details, let's ask this question: what is 
 To answer it, imagine that you develop a system where these components interact:
 - A frontend calling a backend API to get and display data.
 - The frontend fetches the data from a database and returns it to the client.
-- The developer had to handle the communication between the components.
-- The developer had to handle the access between the API and the database using connection strings.
+- The developer has to handle the communication between the components.
+- The developer has to handle the access between the API and the database using connection strings.
 
 During the old days, we would need to install the database, execute some scripts on it, and open two instances of Visual Studio and run them together: one for the APIs and the other for the frontend. We were doing our own orchestration.
 
@@ -35,6 +35,7 @@ Using Aspire, we will:
 - Add the Azure storage as a resource.
 - Add the app to the orchestration.
 - Pass the connection strings to the app.
+- Pass the Orchard administrator password to the app
 
 ## Implementation
 ### The App Startup
