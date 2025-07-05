@@ -1,15 +1,15 @@
 # Orchard CMS Dev-Time Orchestration with ASP.NET Aspire
 ## What is this Tutorial About?
-<a href="https://learn.microsoft.com/en-us/dotnet/aspire/fundamentals/external-parameters" target="_blank">ASP.NET Aspire</a> Aspire is a real game-changer in the .NET ecosystem. It allows dev-time orchestrations of the components that you need for your application. These components (called resources) can be APIs, front-end applications, databases, or any cloud component.
+<a href="https://learn.microsoft.com/en-us/dotnet/aspire/get-started/aspire-overview/" target="_blank">ASP.NET Aspire</a> is a real game-changer in the .NET ecosystem. It allows dev-time orchestrations of the components that you need for your application. These components (called resources) can be APIs, front-end applications, databases, containers, redis cache or any cloud component.
 
 This tutorial presents how to use Aspire to dev-orchestrate a web app based on <a href="https://docs.orchardcore.net/en/latest/" target="_blank">Orchard CMS</a>. The orchestration involves:
-- The app itself, which is a Razor Pages application. The CMS is configured using the <a href="https://docs.orchardcore.net/en/main/reference/modules/AutoSetup/" target="_blank">headless</a> AutoSetup feature that will install the default tenant based on the <a href="https://docs.orchardcore.net/en/main/guides/decoupled-cms/" target="_blank">headless</a> recipe of Orchard Core.
+- The app itself, which is a Razor Pages application. The CMS is configured using <a href="https://docs.orchardcore.net/en/main/reference/modules/AutoSetup/" target="_blank">AutoSetup</a>  to install the default tenant that is based on the <a href="https://docs.orchardcore.net/en/main/guides/decoupled-cms/" target="_blank">headless</a> recipe.
 - A MySQL database that will be used as the content database for the Orchard site.
-- An Azure storage container that will be used as storage for Orchard <a href="https://docs.orchardcore.net/en/main/reference/modules/Shells/" target="_blank">shell</a> and data protection data.
+- An Azure storage container that will be used as storage for Orchard <a href="https://docs.orchardcore.net/en/main/reference/modules/Shells/" target="_blank">shell</a> and data protection.
 
 The result is a decoupled web app that:
 - Shows data that is stored in Orchard.
-- Initial content and content types are created using <a href="https://docs.orchardcore.net/en/main/reference/modules/Shells/" target="_blank">data migrations</a>.
+- Initial content and content types are created using <a href="https://docs.orchardcore.net/en/main/reference/modules/Migrations/" target="_blank">data migrations</a>.
 
 The result should look like the capture below. The text content is coming from Orchard.
 ![](/images/app-capture.png)
@@ -20,8 +20,8 @@ Before diving into the implementation details, let's ask this question: what is 
 To answer it, imagine that you develop a system where these components interact:
 - A frontend calling a backend API to get and display data.
 - The frontend fetches the data from a database and returns it to the client.
-- The developer had to handle the communication between the components.
-- The developer had to handle the access between the API and the database using connection strings.
+- The developer has to handle the communication between the components.
+- The developer has to handle the access between the API and the database using connection strings.
 
 During the old days, we would need to install the database, execute some scripts on it, and open two instances of Visual Studio and run them together: one for the APIs and the other for the frontend. We were doing our own orchestration.
 
@@ -35,6 +35,7 @@ Using Aspire, we will:
 - Add the Azure storage as a resource.
 - Add the app to the orchestration.
 - Pass the connection strings to the app.
+- Pass the Orchard administrator password to the app
 
 ## Implementation
 ### The App Startup
