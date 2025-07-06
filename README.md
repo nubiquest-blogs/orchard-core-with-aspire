@@ -29,7 +29,7 @@ Dev-time orchestration using Aspire changes the way this works. All the componen
 
 Aspire also includes OpenTelemetry so you can have access to the logs and traces of the application in an extremely nice <a href="https://learn.microsoft.com/en-us/dotnet/aspire/fundamentals/dashboard/overview?tabs=bash" target="_blank">dashboard</a>.
 
-## What to Expect from our Tutorial
+## What to Expect from this Tutorial
 Using Aspire, we will:
 - Add the MySQL database as a resource.
 - Add the Azure storage as a resource.
